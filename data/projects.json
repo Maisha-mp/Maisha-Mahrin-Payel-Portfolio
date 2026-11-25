@@ -70,20 +70,6 @@
                 "Midpoint Circle"
             ],
             "href": "projects.html#apartment-opengl"
-        },
-        {
-            "title": "OrkaOS — AI Workflow Automation",
-            "category": "software",
-            "categoryLabel": "Software · AI Automation",
-            "status": "In development",
-            "description": "A local-first AI-powered productivity and business management system, built around a Python backend and a web-based interface.",
-            "technologies": [
-                "Python",
-                "FastAPI",
-                "SQLite",
-                "JavaScript"
-            ],
-            "href": "projects.html#orkaos"
         }
     ]
 }
