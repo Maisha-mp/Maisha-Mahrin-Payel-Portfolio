@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contact a Computer Science & Engineering  student about projects, research, or opportunities.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact | Maisha Mahrin Payel">
+    <meta property="og:description" content="Contact a Computer Science & Engineering student about projects, research, or opportunities.">
+    <meta name="theme-color" content="#172943">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <title>Contact | Maisha Mahrin Payel</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Contact form validation and email -->
+    <script src="js/contact.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Maisha Mahrin Payel<span>.</span>
+            </a>
+
+            <button class="menu-toggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="primary-nav" class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="research.html">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="contact.html" class="nav-contact active" aria-current="page">
+                    Let's connect ↗
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main id="main">
+
+        <!-- CONTACT -->
+        <section class="contact-section" id="contact">
+
+            <div class="container contact-layout">
+
+                <div class="contact-intro">
+
+                    <p class="eyebrow">
+                        <span class="gold-number">04</span>
+                        HAVE A PROJECT OR AN IDEA?
+                    </p>
+
+                    <h2>
+                        Let's start a <em>conversation.</em>
+                    </h2>
+
+                    <p>
+                        I'm open to meaningful conversations,
+                        learning opportunities and thoughtful collaborations.
+                    </p>
+
+                    <a href="mailto:your.email@example.com"
+                       class="contact-email">
+                        your.email@example.com ↗
+                    </a>
+
+                </div>
+
+
+                <form id="contact-form" class="contact-form" novalidate>
+
+                    <div class="form-group">
+                        <label for="contact-name">Enter Your Name</label>
+                        <input type="text"
+                               id="contact-name"
+                               name="name"
+                               personal="Name"
+                               aria-describedby="name-error">
+                        <span class="field-error" id="name-error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Enter Your Email address</label>
+                        <input type="email"
+                               id="contact-email"
+                               name="email"
+                               personal="name@example.com"
+                               aria-describedby="email-error">
+                        <span class="field-error" id="email-error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-reason">What would you like to discuss?</label>
+                        <select id="contact-reason"
+                                name="reason"
+                                aria-describedby="reason-error">
+                            <option value="" disabled selected>Select a topic</option>
+                            <option>Professional opportunity</option>
+                            <option>Research collaboration</option>
+                            <option>Project collaboration</option>
+                            <option>Something else</option>
+                        </select>
+                        <span class="field-error" id="reason-error" aria-live="polite"></span>
+                    </div>
+
+                    <fieldset class="form-group radio-group" aria-describedby="sender-error">
+                        <legend>I'm contacting you as a</legend>
+
+                        <label>
+                            <input type="radio" name="sender-type" value="Recruiter / employer">
+                            Recruiter
+                        </label>
+
+                        <label>
+                            <input type="radio" name="sender-type" value="Student / researcher">
+                            Student / researcher
+                        </label>
+
+                        <label>
+                            <input type="radio" name="sender-type" value="Other">
+                            Other
+                        </label>
+
+                        <span class="field-error" id="sender-error" aria-live="polite"></span>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message"
+                                  name="message"
+                                  rows="4"
+                                  personal="Write your message..."
+                                  aria-describedby="message-error"></textarea>
+                        <span class="field-error" id="message-error" aria-live="polite"></span>
+                    </div>
+
+                    <button type="submit" class="button button-primary">
+                        Prepare email ↗
+                    </button>
+
+                    <p id="form-success" class="form-success" role="status" hidden>
+                        Your message is ready. Your email app should open with the draft.
+                        If it does not, email <a href="mailto:your.email@example.com">your.email@example.com</a> directly.
+                    </p>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <a href="index.html" class="logo footer-logo">
+                Maisha Mahrin Payel<span>.</span>
+            </a>
+
+            <p>Designed with intention. Built while learning.</p>
+
+            <div class="footer-links">
+                <a href="https://github.com/Maisha-mp" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/maisha-mahrin-payel-99aaa5438/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:maishamahrinpayel@gmail.com">Email</a>
+            </div>
+
+            <span class="copyright">
+                © <span id="current-year"></span> Maisha Mahrin Payel
+            </span>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

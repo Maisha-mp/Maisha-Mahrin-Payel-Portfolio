@@ -1,0 +1,89 @@
+{
+    "projects": [
+        {
+            "title": "Academic Fraud Detection",
+            "category": "research",
+            "categories": [
+                "research",
+                "security"
+            ],
+            "categoryLabel": "Research·Cybersecurity·Machine Learning",
+            "status": "In progress",
+            "description": "A cybersecurity based research project exploring how machine learning can help identify potentially fraudulent scholarship, internship and academic publication offers.",
+            "technologies": [
+                "Python",
+                "Scikit-learn",
+                "TF-IDF"
+            ],
+            "href": "projects.html#academic-fraud-detection"
+        },
+        {
+            "title": "FlagShip — Feature Flag System",
+            "category": "software",
+            "categoryLabel": "Software Engineering",
+            "status": "In development",
+            "description": "A Java-based feature-flag evaluation engine focused on rule evaluation, targeting, deterministic percentage-based rollouts and reliable flag evaluation.",
+            "technologies": [
+                "Java",
+                "Feature Flags",
+                "Evaluation Engine"
+            ],
+            "href": "projects.html#flagship"
+        },
+        {
+            "title": "EnerPeers — Peer-to-Peer Energy Trading",
+            "category": "software",
+            "categoryLabel": "Software · Web Application",
+            "status": "Completed · Coursework",
+            "description": "A web application where households can trade surplus renewable energy with their neighbours, developed as a university capstone project.",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Chart.js"
+            ],
+            "href": "projects.html#enerpeers"
+        },
+        {
+            "title": "Secure Login-Based Encrypted File Sharing System",
+            "category": "security",
+            "categoryLabel": "Cybersecurity · Linux",
+            "status": "Group project",
+            "description": "A Linux-based file-sharing system designed around user authentication and encrypted file exchange. Developed an assigned Bash component and contributed project documentation.",
+            "technologies": [
+                "Linux",
+                "Shell",
+                "Bash"
+            ],
+            "href": "projects.html#secure-file-sharing"
+        },
+        {
+            "title": "Apartment — 2D Interior Scene",
+            "category": "software",
+            "categoryLabel": "Software · Computer Graphics",
+            "status": "Group project",
+            "description": "A 2D apartment interior scene created with OpenGL, using DDA, Bresenham's line and midpoint-circle algorithms.",
+            "technologies": [
+                "OpenGL",
+                "DDA",
+                "Bresenham",
+                "Midpoint Circle"
+            ],
+            "href": "projects.html#apartment-opengl"
+        },
+        {
+            "title": "OrkaOS — AI Workflow Automation",
+            "category": "software",
+            "categoryLabel": "Software · AI Automation",
+            "status": "In development",
+            "description": "A local-first AI-powered productivity and business management system, built around a Python backend and a web-based interface.",
+            "technologies": [
+                "Python",
+                "FastAPI",
+                "SQLite",
+                "JavaScript"
+            ],
+            "href": "projects.html#orkaos"
+        }
+    ]
+}

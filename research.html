@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Research on academic impersonation fraud targeting university students, using machine learning to help students assess offers.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Research | Maisha Mahrin Payel">
+    <meta property="og:description" content="Research on academic impersonation fraud targeting university students, using machine learning to help students assess offers.">
+    <meta name="theme-color" content="#172943">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <title>Research | Maisha Mahrin Payel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- NAVIGATION (same on every page) -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Maisha Mahrin Payel<span>.</span>
+            </a>
+
+            <button class="menu-toggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="primary-nav">
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="primary-nav" class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="research.html" class="active" aria-current="page">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="contact.html" class="nav-contact">
+                    Let's connect ↗
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main id="main">
+
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow"><span class="gold-number">01</span> RESEARCH</p>
+                <h1>Helping students tell real academic opportunities from <em>fake ones.</em></h1>
+                <p class="page-lead">
+                    A supervised research project on academic impersonation fraudulent offers, using machine learning to help students assess scholarship, internship and journal offers
+                     aimed at university students.
+                </p>
+            </div>
+        </section>
+
+        <section class="section projects-section">
+            <div class="container profile-layout">
+                <div>
+                    <p class="eyebrow">AT A GLANCE</p>
+                    <h2>Project <em>summary</em></h2>
+                    <dl class="glance">
+                        <div><dt>Title</dt><dd>A systematic study and risk assessment of academic impersonation fraudulent attacks targeting university students</dd></div>
+                        <div><dt>Type</dt><dd>Independent research project, under supervision</dd></div>
+                        <div><dt>Dates</dt><dd>January 2026 to present</dd></div>
+                        <div><dt>Supervisor</dt><dd><span class="personal">Ms. Aliza Ahmed Khan, Sr. Lecturer, Daffodil International University</span></dd></div>
+                        <div><dt>My role</dt><dd>Led the researchproject: defined the problem, planned the study, collected data and built the models and web tool</dd></div>
+                        <div><dt>Tools</dt><dd>Python · scikit-learn · NumPy · TF-IDF</dd></div>
+                    </dl>
+                </div>
+                <div class="research-text">
+                    <p class="eyebrow">THE PROBLEM</p>
+                    <h2>Why it <em>matters.</em></h2>
+                    <p>
+                        Students apply for scholarships, internships and journals
+                        constantly, and attackers impersonate legitimate institutions to
+                        exploit that. A student who cannot tell a genuine offer
+                        from a fake one can lose money, personal data or time.
+                    </p>
+                    <p> <b>As an effort to address this gap, this research includes a <em>unified cybersecurity based framework under one singular web tool </em> that can be utilized by students.
+                    </b></p>
+                        
+                </div>
+            </div>
+        </section>
+
+<section class="findings">
+  <div class="col">
+    <p class="eyebrow">Method</p>
+    <h2 class="title">How I <span>did it.</span></h2>
+    <ol class="steps">
+      <li>Defined the problem and the types of offer to cover: scholarships, internships and journals.</li>
+      <li>Planned the study with my supervisor.</li>
+      <li>Collected data from various online sources like university websites, popular scholarship sites, job listings, scam listings, journal indexes and more.</li>
+      <li>Turned offer text into features with TF-IDF vectorization.</li>
+      <li>Trained three text-classification machine learning models in Python with scikit-learn.</li>
+      <li>Built a web interface so students can assess an offer themselves.</li>
+    </ol>
+  </div>
+
+  <div class="col">
+    <p class="eyebrow">Results</p>
+    <h2 class="title">What I <span>found.</span></h2>
+    <dl class="result-list">
+      <div class="result-row"><dt>Dataset</dt><dd>1,240 samples: 620 fraudulent, 620 genuine (840 scholarship/internship: 420/420; 400 journal: 200 predatory/200 legitimate)</dd></div>
+      <div class="result-row"><dt>Best model (scholarship + internship)</dt><dd>Random Forest (highest accuracy); Naive Bayes has the highest precision</dd></div>
+      <div class="result-row"><dt>Accuracy (scholarship + internship)</dt><dd>97.38% (RF) / 97.02% (NB)</dd></div>
+      <div class="result-row"><dt>Precision / recall (scholarship + internship)</dt><dd>98.38% / 96.43% (RF); 99.76% / 94.29% (NB)</dd></div>
+      <div class="result-row"><dt>Best model (journal)</dt><dd>Logistic Regression (title + DOAJ + Scopus flags)</dd></div>
+      <div class="result-row"><dt>Accuracy (journal, title + flags)</dt><dd>98.75% ±1.25 (LR) / 98.00% ±1.87 (RF) / 96.25% ±2.80 (NB), 10-fold CV</dd></div>
+      <div class="result-row"><dt>Precision / recall (journal)</dt><dd>97.62% / 100.00% (LR); 96.69% / 99.50% (RF); 97.45% / 95.00% (NB)</dd></div>
+      <div class="result-row"><dt>Main finding</dt><dd>RF and NB outperform the Logistic Regression baseline on scholarship/internship posts (93.33%). Text length is the strongest signal: legitimate posts average about 1,121 characters versus about 177 for fraudulent ones. For journals, DOAJ and Scopus indexing drive classification.</dd></div>
+      <div class="result-row"><dt>One thing about fraud offers</dt><dd>Fraudulent offers are usually short, vague posts: fake listings average about 177 characters while legitimate ones average about 1,121, so length alone separates most of them.</dd></div>
+    </dl>
+  </div>
+</section>
+<section class="section projects-section">
+    <div class="container about-columns">
+        <div class="research-text">
+            <p class="eyebrow">LIMITS</p>
+            <h2>What it <em>can’t do yet.</em></h2>
+            <p>
+                The study is still in progress, and a text classifier
+                only reflects the data it was trained on.
+                <span class="personal">The dataset has 1,240 labelled samples, which is small for a problem where scam styles change quickly. Ablation studies confirmed which features drive the models, but all results come from cross-validation on my own data rather than new, unseen posts.</span>
+            </p>
+        </div>
+        <div class="research-text">
+            <p class="eyebrow">NEXT STEPS</p>
+            <h2>Where it <em>goes next.</em></h2>
+            <p>
+                <span class="personal">Next, I plan to gather feedback from students who use the prototype and prepare the study for publication in a peer-reviewed venue.</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+        <section class="section projects-section">
+            <div class="container">
+                <div class="tool-card">
+                    <div>
+                        <h2>Try the <em>web tool.</em></h2>
+                        <p>Paste a scholarship, internship or journal offer and see how it is assessed.</p>
+                    </div>
+                    <a href="https://YOUR-TOOL-LINK" class="button button-primary" target="_blank" rel="noopener">Open the tool <span>↗</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-band">
+            <div class="container">
+                <h2>Interested in the <em>details?</em></h2>
+                <p class="page-lead">I’m happy to talk through the method, data and results.</p>
+                <div class="cta-links">
+                    <a href="index.html#contact" class="button button-primary">Get in touch <span>↗</span></a>
+                    <a href="projects.html" class="text-link">See all projects ↗</a>
+                </div>
+            </div>
+        </section>
+</main>
+
+
+    <!-- FOOTER (same on every page) -->
+      <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <a href="index.html" class="logo footer-logo">
+                Maisha Mahrin Payel<span>.</span>
+            </a>
+
+            <p>Designed with intention. Built while learning.</p>
+
+            <div class="footer-links">
+                <a href="https://github.com/Maisha-mp" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/maisha-mahrin-payel-99aaa5438/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:maishamahrinpayel@gmail.com">Email</a>
+            </div>
+
+            <span class="copyright">
+                © <span id="current-year"></span> Maisha Mahrin Payel
+            </span>
+
+        </div>
+</footer>
+
+</body>
+</html>
