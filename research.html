@@ -120,15 +120,15 @@
     <p class="eyebrow">Results</p>
     <h2 class="title">What I <span>found.</span></h2>
     <dl class="result-list">
-      <div class="result-row"><dt>Dataset</dt><dd>1,240 samples: 620 fraudulent, 620 genuine (840 scholarship/internship: 420/420; 400 journal: 200 predatory/200 legitimate)</dd></div>
-      <div class="result-row"><dt>Best model (scholarship + internship)</dt><dd>Random Forest (highest accuracy); Naive Bayes has the highest precision</dd></div>
-      <div class="result-row"><dt>Accuracy (scholarship + internship)</dt><dd>97.38% (RF) / 97.02% (NB)</dd></div>
-      <div class="result-row"><dt>Precision / recall (scholarship + internship)</dt><dd>98.38% / 96.43% (RF); 99.76% / 94.29% (NB)</dd></div>
+      <div class="result-row"><dt>Dataset</dt><dd>1,240 samples: 840 scholarship/internship (420 fraudulent, 420 genuine); 400 journal (200 predatory, 200 legitimate)</dd></div>
+      <div class="result-row"><dt>Best model (scholarship + internship)</dt><dd>Logistic Regression on words only (tied on accuracy with RF and NB; selected for interpretability)</dd></div>
+      <div class="result-row"><dt>Accuracy (scholarship + internship)</dt><dd>97.81 ± 1.59% (LR, 10-fold CV); 99.38% held-out</dd></div>
+      <div class="result-row"><dt>Precision / recall (scholarship + internship)</dt><dd>97.81% / 97.81% (LR, 10-fold CV); 98.77% / 100.00% (LR, held-out)</dd></div>
       <div class="result-row"><dt>Best model (journal)</dt><dd>Logistic Regression (title + DOAJ + Scopus flags)</dd></div>
-      <div class="result-row"><dt>Accuracy (journal, title + flags)</dt><dd>98.75% ±1.25 (LR) / 98.00% ±1.87 (RF) / 96.25% ±2.80 (NB), 10-fold CV</dd></div>
-      <div class="result-row"><dt>Precision / recall (journal)</dt><dd>97.62% / 100.00% (LR); 96.69% / 99.50% (RF); 97.45% / 95.00% (NB)</dd></div>
-      <div class="result-row"><dt>Main finding</dt><dd>RF and NB outperform the Logistic Regression baseline on scholarship/internship posts (93.33%). Text length is the strongest signal: legitimate posts average about 1,121 characters versus about 177 for fraudulent ones. For journals, DOAJ and Scopus indexing drive classification.</dd></div>
-      <div class="result-row"><dt>One thing about fraud offers</dt><dd>Fraudulent offers are usually short, vague posts: fake listings average about 177 characters while legitimate ones average about 1,121, so length alone separates most of them.</dd></div>
+      <div class="result-row"><dt>Accuracy (journal, title + flags)</dt><dd>98.75 ± 1.53% (LR) / 83.75 ± 4.80% (RF) / 96.56 ± 2.95% (NB), 10-fold CV</dd></div>
+      <div class="result-row"><dt>Precision / recall (journal)</dt><dd>97.56% / 100.00% (LR); 84.18% / 83.12% (RF); 98.06% / 95.00% (NB)</dd></div>
+      <div class="result-row"><dt>Main finding</dt><dd>Words alone reach 97.81%; RF and NB tie with LR, so no model beats it. Length alone reaches 87.81%, but adding it to words lowers accuracy, so the final model excludes it. For journals, DOAJ and Scopus listing status drives classification.</dd></div>
+      <div class="result-row"><dt>One thing about fraud offers</dt><dd>Fraud posts are much shorter on average (about 178 characters versus 1,084 for genuine posts), but length alone is not a reliable test: a 195-character cut-off flags 339 of 420 fraud posts and also 24 of 420 genuine posts.</dd></div>
     </dl>
   </div>
 </section>
@@ -160,7 +160,7 @@
                         <h2>Try the <em>web tool.</em></h2>
                         <p>Paste a scholarship, internship or journal offer and see how it is assessed.</p>
                     </div>
-                    <a href="https://YOUR-TOOL-LINK" class="button button-primary" target="_blank" rel="noopener">Open the tool <span>↗</span></a>
+                    <a href="https://pam789.pythonanywhere.com/" class="button button-primary" target="_blank" rel="noopener">Open the tool <span>↗</span></a>
                 </div>
             </div>
         </section>
